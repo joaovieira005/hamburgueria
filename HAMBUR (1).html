@@ -1,0 +1,540 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>HAMBÚR - O melhor hambúrguer no melhor preço</title>
+    <style type="text/css">
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        :target{
+            scroll-margin-top:170px; 
+        }
+        
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 140%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* fundo a tela toda*/
+            background-position: center;
+            background-attachment: fixed;
+            /* imagem de fundo fixa*/
+            background-image: url('https://img.freepik.com/vetores-gratis/hamburguer-realista-no-fundo-do-quadro_79603-1042.jpg?w=2000');
+            margin: 0;
+        }
+
+        .centralizado {
+            text-align: center;
+            color: rgb(247, 247, 247);
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Fundo preto transparente */
+            padding: 20px;
+            /* Espaçamento interno para o conteúdo do cabeçalho */
+        }
+
+        .cabecalho {
+            display: flex;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            margin-top: 0px;
+            top: 0px;
+
+        }
+
+        .cabecalho img {
+            width: 90px;
+            /* Largura da imagem do logotipo */
+            height: 90px;
+            /* Altura da imagem do logotipo */
+            margin-right:0px;
+            /* Espaçamento à direita da imagem imagem do titulo */
+        }
+
+        .cabecalho h1 {
+            font-size: 70px;
+            /* Tamanho da fonte do título */
+            margin: 0;
+            color: rgb(255, 255, 255);
+            /* Cor do texto do título */
+            font-family:Comic Sans MS;
+        }
+
+        .pratos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: auto;
+            /* margin dos lanches */
+            max-width: 1300px;
+            /* Espaçamento entre os lanches*/
+        }
+
+        .prato {
+            width: 30%;
+            /* Ajuste a largura conforme necessário */
+            margin-bottom: 20px;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Fundo preto transparente */
+            padding: 20px;
+            /* Espaçamento interno para o conteúdo do prato */
+            border-radius: 40px;
+        }
+
+        .prato img {
+            width: 100%;
+            /* Largura da imagem ajustada para 100% do contêiner */
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .prato ul {
+            list-style: url("iconeburguer.png");
+            padding: 0;
+            margin: 0;
+            margin-left: 5%;
+        }
+
+        .prato li {
+            margin-bottom: 5px;
+        }
+
+        .botao-comprar {
+            background-color: #000000d9;
+            /* Cor de fundo*/
+            color: white;
+            /* Cor do texto branco */
+            border: none;
+            /* Sem borda */
+            padding: 15px 32px;
+            /* Espaçamento interno do botão */
+            text-align: center;
+            /* Centraliza o texto dentro do botão */
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            /* Tamanho da fonte */
+            margin-top: 10px;
+            transition-duration: 0.55s;
+            cursor: pointer;
+            border-radius: 25px;
+            /* Bordas arredondadas */
+        }
+
+        .botao-comprar:hover {
+            background-color: #6aff006d;
+            /* Altera a cor de fundo no hover */
+        }
+
+        .barra-navegacao {
+            margin-left: 8%;
+            
+        }
+
+        .barra-navegacao ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .barra-navegacao li {
+            display: inline-block;
+            margin-left: 16px;
+            font-family:Comic Sans MS;
+            
+        }
+
+        .barra-navegacao a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .barra-navegacao a:hover {
+            border-bottom: 2px solid white;
+            transition-duration: 0.55s;
+            cursor: pointer;
+            padding: 15px 32px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .bebidas {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;   
+            margin: 30px;
+        }
+
+        .lanches {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;   
+            margin-top: 7%;
+            margin-left:30px;
+            margin-right:30px;
+            margin-bottom:30px;
+        }
+
+
+        .bebidas h1 {
+            color: white;
+            font-size: 40px;
+        }
+
+        .bebidas-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin:auto;
+            /* margin dos lanches */
+            max-width: 1300px;
+            /* Espaçamento entre os lanches*/
+        }
+
+        .Sobremesas-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin:auto;
+            /* margin dos lanches */
+            max-width: 1300px;
+            /* Espaçamento entre os lanches*/
+        }
+
+        .sobre {
+            background-color: rgba(0, 0, 0, 0.71);
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;   
+            margin: 30px;
+        }
+
+        .sobre h1 {
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+        }
+
+        .redes-sociais a {
+           display: block;
+           margin-bottom: 10px;
+           text-decoration: none;
+           color: #ffffff; /* Cor dos ícones */
+           display: inline-flex;
+        }
+
+         embed, iframe{
+		 
+			width:60%;
+			height:300px;
+			margin-top:0%;
+			margin-left:20%;
+			box-shadow:0px 0px 20px 20px rgb(50,50,50);
+			border:10px double rgb(200,10,10);
+		}
+				
+			
+		 .locali{
+					
+			margin-left:0%;
+			font-family:Comic Sans MS;
+			color:rgb(200,10,10);
+		}
+			
+
+
+        
+
+  
+
+        
+
+
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="cabecalho">
+        <img src="https://thumbs.dreamstime.com/b/molde-do-%C3%ADcone-logotipo-da-loja-hamburguer-no-fundo-preto-127681862.jpg"
+            alt="Logo">
+        <h1 class="centralizado">HAMBÚR</h1>
+
+        <nav class="barra-navegacao">
+            <ul>
+                <li><a href="#menu">LANCHES</a></li>
+                <li><a href="#galeria">SUCOS E REFRIGERANTES</a></li>
+                <li><a href="#sobremesa">SOBREMESAS</a></li>
+                <li><a href="#SOBRE">SOBRE NÓS</a></li>
+                <li><a href="#locali">LOCALIZACÃO</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <hr/>
+    <div class="lanches">
+        <h1 id="menu">LANCHES</h1>
+    </div>
+    <div class="pratos-container"> 
+        
+        <div class="prato">
+
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202309191953_DGF6_i.jpg"
+                alt="Foto do Prato 1">
+            <h3>WHASTE</h3>
+            <ul>
+                <li>PÃO DE HAMBÚRQUER</li>
+                <li>CHEDDAR</li>
+                <li>BACON</li>
+                <li>JAPAPENÕ PICANTE</li>
+                <li>ONION RINGS</li>
+                <li>TOMATE CORTADO</li>
+                <li>ALFACE FRESCO</li>
+                <li>SERVE 1 PESSOA</li>
+                <h4>R$ 29,90</h4>
+            </ul>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202309191952_21K2_i.jpg"
+                alt="Foto do Prato 2">
+            <h3>BIG DAY</h3>
+            <ul>
+                <li>PÃO BRIOCHE</li>
+                <li>100% PEITO DE FRANGO EMPANADO</li>
+                <li>BACON CROCANTE</li>
+                <li>QUEIJO CHEDDAR</li>
+                <li>SERVE 1 PESSOA</li>
+                <H4>R$ 33,90</H4>
+            </ul>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202309191952_LY7V_i.jpg"
+                alt="Foto do Prato 3">
+            <h3>MEGA STACKER CHEDDAR</h3>
+            <ul>
+                <li>PÃO ARTESANAL COM GERGELIM</li>
+                <li>02 HAMBÚRGUERES</li>
+                <li>BOVINOS GRELHAD</li>
+                <li>QUEIJO CHEDDAR</li>
+                <li>BACON CROCANTE</li>
+                <li>SERVE 1 PESSOA</li>
+                <h4>R$ 38,90</H4>
+            </ul>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202309191953_GGT6_i.jpg"
+                alt="Foto do Prato 4">
+            <h3>OUTRO LANCHE</h3>
+            <ul>
+                <li>PÃO ARTESANAL COM GERGELIM</li>
+                <li>HAMBÚRGUERES BOVINO</li>
+                <li>QUEIJO CHEDDAR</li>
+                <li>KETCHUP HEINZ</li>
+                <li>MAIONESE</li>
+                <li>BACON CROCANTE</li>
+                <li>ALFACE FRESCO</li>
+                <LI>TOMATE CORTADO</LI>
+                <li>SERVE 1 PESSOA</li>
+                <h4>R$ 38,90</H4>
+            </ul>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291445_812B_i.jpg"
+                alt="Foto do Prato 5">
+            <h3>HAMBÚR CHEDDAR</h3>
+            <ul>
+                <li>PÃO BRIOCHE</li>
+                <li>HAMBÚRGUERES</li>
+                <li>CÉBOLA SALTEADA</li>
+                <li>QUEIJO CHEDDAR</li>
+                <li>SERVE 1 PESSOA</li>
+                <h4>R$ 24,90</H4>
+            </ul>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291446_PC35_i.jpg"
+                alt="Foto do Prato 6">
+            <h3>RODEIO DUPLO</h3>
+            <ul>
+                <li>PÃO ARTESANAL COM GERGELIM</li>
+                <li>2 HAMBÚRGUERES BOVINO</li>
+                <li>FATIA CHEDDAR</li>
+                <li>ONION RINGS</li>
+                <li>QUEIJO DERETIDO</li>
+                <li>MOLHO BARBECUE</li>
+                <li>MAIONESE</li>
+                <li>SERVE 1 PESSOA</li>
+                <h4>R$ 38,90</H4>
+            </ul>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+  </div>    
+        <hr>
+        <div id="galeria" class="pratos-container"></div>
+        <div class="bebidas">
+            <h1>BEBIDAS</h1>
+        </div>
+        <div class="pratos-container"></div>
+   <div class="bebidas-container">
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291441_20IU_i.jpg"
+            alt="Foto bebida 1">
+            <h3>PEPSI LATA - 350ML</h3>
+            <h4>R$ 14,90</H4>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+    
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291442_3UQ2_i.jpg"
+            alt="Foto bebida 2">
+            <h3>SUCO DE LARANJA</h3>
+            <h4>R$ 16,90</H4>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202306291443_850H_i.jpg"
+            alt="Foto bebida 3">
+            <h3>SUCO DE UVA</h3>
+            <h4>R$ 16,90</H4>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+    </div>
+
+    <hr>
+    <div id="sobremesa" class="pratos-container"></div>
+    <div class="bebidas">
+        <h1>SOBREMESAS</h1>
+    </div>
+    <div class="Sobremesas-container">
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202210041434_C67H_i.jpg"
+            alt="Foto sobremesas 1">
+            <h3>BROWNIES</h3>
+
+            <ul>
+                <li>BRIGADEIRO DE CHOCOLATE</li>
+                <LI>SERVE UMA PESSOA</LI>
+            </ul>
+            <h4>R$ 10,90</H4>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202303220950_2Y55_i.jpg"
+            alt="Foto sobremesas 2">
+            <h3>DOIS BROWNIES</h3>
+
+            <ul>
+                <li>BRIGADEIRO DE CHOCOLATE</li>
+                <LI>SERVE UMA PESSOA</LI>
+            </ul>
+            <h4>R$ 18,90</H4>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202210041434_C40R_i.jpg"
+            alt="Foto sobremesas 3">
+            <h3>SHAKE CROCANTE</h3>
+
+            <ul>
+                <LI>SERVE UMA PESSOA</LI>
+                <LI>400 ml</LI>
+            </ul>
+            <h4>R$ 16,90</H4>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202202220931_5S08_i.jpg"
+            alt="Foto sobremesas 4">
+            <h3>MIX OVOMALTINE</h3>
+
+            <ul>
+                <LI>SERVE UMA PESSOA</LI>
+            </ul>
+            <h4>R$ 16,90</H4>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202202012228_T5I4_i.jpg"
+            alt="Foto sobremesas 5">
+            <h3>SHAKE DOCE DE LEITE</h3>
+
+            <ul>
+                <LI>SERVE UMA PESSOA</LI>
+                <li>400 ml</li>
+            </ul>
+            <h4>R$ 16,90</H4>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+
+        <div class="prato">
+            <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/6e73dce2-a17f-4aef-9035-1409cea198fe/202202211530_QF3B_i.jpg"
+            alt="Foto sobremesas 6">
+            <h3>SHAKE DE CHOCOLATE</h3>
+
+            <ul>
+                <LI>SERVE UMA PESSOA</LI>
+                <li>400 ml</li>
+            </ul>
+            <h4>R$ 16,90</H4>
+            <button class="botao-comprar" onclick="comprarAgora()">COMPRE AGORA</button>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <div id="SOBRE" class="pratos-container"></div>
+    <div class="sobre">
+        <h2>SOBRE NÓS</h2>
+        <div class="redes-sociais">
+            <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/seu_usuario" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/seu_perfil" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.facebook.com/seu_perfil" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+        </div>
+    </div>
+
+    <hr>
+    <div id="locali" class="pratos-container"></div>
+    <div class="bebidas">
+        <h1>LOCALIZACÃO</h1>
+    </div>
+    <div class="locali">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.148244095633!2d-46.66156794878349!3d-23.56711239266542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b8867bd055%3A0x2ad19f2cf9902905!2sMcDonald&#39;s!5e0!3m2!1spt-BR!2sbr!4v1696524634301!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</body>
+</html>
